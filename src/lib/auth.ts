@@ -5,11 +5,8 @@ const logIn = async () => {
   try {
     signInWithPopup(firebase.auth, firebase.googleProvider)
       .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential!.accessToken;
-        // The signed-in user info.
-        const user = result.user;
+        console.log("logged in:", result.user.email);
+
       }).catch((error) => {
         console.log("failed to create logIn popup:", error);
       });
@@ -27,8 +24,8 @@ const logOut = async () => {
 };
 
 const auth = {
-  logIn,
-  logOut,
+  signIn: logIn,
+  signOut: logOut,
 };
 
 export { auth };

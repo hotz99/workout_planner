@@ -7,7 +7,6 @@ const user = writable<User | null>(null);
 
 onAuthStateChanged(firebase.auth, (firebaseUser) => {
     user.set(firebaseUser);
-    console.log("firebaseUser email :", firebaseUser?.email);
 });
 
 export { user };

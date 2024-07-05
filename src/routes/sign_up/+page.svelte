@@ -5,8 +5,9 @@
 
 {#if $user}
     <p>Welcome, {$user.email}.</p>
-    <button on:click={async () => await auth.logOut()}>Logout</button>
+    <button on:click={async () => await auth.signOut()}>Sign Out</button>
 {:else}
-    <button on:click={async () => await auth.logIn()}>Log In with Google</button
+    <button on:click={async () => await auth.signIn()}
+        >Sign In with Google</button
     >
 {/if}
