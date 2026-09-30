@@ -5,7 +5,7 @@ Workout Planner is a web app to find exercises and plan workouts.
 ## Features
 
 - Browse exercises by primary muscle.
-- See the details of each exercise: level, equipment, instructions and images.
+- See the instructions and images for each exercise.
 - Calculate your daily energy expenditure.
 - Sign in with Google (Firebase Authentication).
 
